@@ -1,0 +1,30 @@
+Adams-MBP:wordCount adam$ touch log.txt
+Adams-MBP:wordCount adam$ ./wordCount
+test test test
+Number of words: 3
+Longest word length: 4
+Largest number of vowels: 1
+
+Adams-MBP:wordCount adam$ ./wordCount
+
+Number of words: 0
+Longest word length: 0
+Largest number of vowels: 0
+
+Adams-MBP:wordCount adam$ ./wordCount
+   -   
+Number of words: 0
+Longest word length: 0
+Largest number of vowels: 0
+
+Adams-MBP:wordCount adam$ ./wordCount
+aeiou 
+Number of words: 1
+Longest word length: 5
+Largest number of vowels: 5
+
+Adams-MBP:wordCount adam$ ./wordCount
+hello world ------------------ helloworld
+Number of words: 3
+Longest word length: 10
+Largest number of vowels: 3
