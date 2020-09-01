@@ -23,7 +23,7 @@ public class LegoHat {
         if (this.style == "sun visor" && season != "summer") {
             return 0;
         }
-        // Random rd = new Random();
-        return 8;// rd.ints(0, 10).findFirst().getAsInt();
+        Random rd = new Random();
+        return rd.ints(0, 10).findFirst().getAsInt();
     }
 }
