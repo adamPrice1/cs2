@@ -1,3 +1,5 @@
+package CToJava;
+
 class ScotchTape {
     String colour;
     int weight;
