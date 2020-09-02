@@ -11,7 +11,6 @@ struct dominoe
 
 void printSide(int side)
 {
-
     switch (side)
     {
     case 0:

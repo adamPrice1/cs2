@@ -69,7 +69,7 @@ public class ListNode {
         while (currNode != null && !currNode.data.equals(addAfter.data)) {
             currNode = currNode.next;
         }
-
+        // currNode = imgur
         // currNode will either be null if we got to the
         // end of the list without finding the node,
         // or the node we want to add the new one after
@@ -77,6 +77,7 @@ public class ListNode {
             newNode.next = currNode.next;
             currNode.next = newNode;
             newNode.prev = currNode;
+            newNode.next.prev = newNode;
         }
     }
 
@@ -148,9 +149,10 @@ public class ListNode {
 
             // If currNode's next is null, then we never found the
             // node to remove
+            // bustle
             if (currNode.next != null) {
                 currNode.next = currNode.next.next;
-                currNode.next.next.prev = currNode;
+                currNode.next.prev = currNode;
             }
 
             // If we got this far, the head hasn't changed
@@ -194,46 +196,21 @@ public class ListNode {
 
     public ListNode reverse() {
 
-        // ListNode currNode = this;
-        // // traverse to beginning of list
-        // while (currNode.prev != null) {
-        // currNode = currNode.prev;
-        // }
-
-        // while (currNode != null) {
-        // ListNode temp = currNode.next;
-        // currNode.next = currNode.prev;
-        // currNode.prev = temp;
-        // currNode = currNode.prev;
-        // }
-
-        // ListNode newHead = this;
-        // while (newHead.prev != null) {
-        // newHead = newHead.prev;
-        // }
-        // return newHead;
-
-        // traverse to the last node
         ListNode currNode = this;
         while (currNode.next != null) {
             currNode = currNode.next;
         }
-
-        System.out.println("currNode: " + currNode.data.toString());
-        currNode.next = currNode.prev;
-        currNode.prev = null;
-
         while (currNode != null) {
             ListNode temp = currNode.prev;
             currNode.prev = currNode.next;
             currNode.next = temp;
             currNode = currNode.next;
         }
+
         ListNode newHead = this;
-        while (newHead.next != null) {
-            newHead = newHead.next;
+        while (newHead.prev != null) {
+            newHead = newHead.prev;
         }
-        System.out.println("New head: " + newHead.data.toString());
         return newHead;
     }
 }
