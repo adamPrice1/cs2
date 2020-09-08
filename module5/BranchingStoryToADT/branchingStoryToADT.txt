@@ -1,0 +1,19 @@
+1.
+If I were to change the BranchingStory class into an Abstract Data type that would be able to represent a directed graph between any object
+there are a few changes I would need to make:
+* Remove any references to a story, ADT's are concerned with the data they are representing, not how they will eventually be used.
+* I would replace Scenes with node objects
+* I would remove the Choice class as I feel this is specific to a story. Instead I would add a list of connected nodes to each Node class.
+* general methods like startStory and stopStory would be replaced with methods like gotoNode(Node newNode)
+
+A list of operations I think would be fitting for an ADT of this type:
+- getCurrentNode()
+- getChildNodes()
+- gotoNode(Node newNode)
+- addNode(Node parent)
+- removeNode(Node parent)
+
+2. 
+The advantage of using an ADT in this manner is that the Abstract Data Type can be used in many different contexts, for example, 
+with the ADT above you could construct a binary tree, or you could represent a BranchedStory. There are many possible uses of this data type,
+however the BranchingStory class is can only be used for it's original purpose.
