@@ -3,7 +3,7 @@ package ui;
 import data.Store;
 import data.Aquarium;
 import data.CarDealership;
-import data.JaguarDealership;
+import data.FranchiseDealership;
 
 public class TestClass {
     public static void main(String[] args) {
@@ -55,12 +55,12 @@ public class TestClass {
             System.out.println(carsRus.getStoreName() + " is performing well");
         }
 
-        JaguarDealership jagsRus = new JaguarDealership(100, "Jaguars R us", true, 500);
+        FranchiseDealership jagsRus = new FranchiseDealership(100, "Jaguars R us", true, 500, "Jaguar");
         if (!jagsRus.hasPassedInspection()) {
             System.out.println(jagsRus.getStoreName() + " is due for an inspection");
         }
         jagsRus.runInspection();
-        if(jagsRus.hasPassedInspection()){
+        if (jagsRus.hasPassedInspection()) {
             System.out.println(jagsRus.getStoreName() + " Has passed its inspection");
         }
     }
