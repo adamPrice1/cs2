@@ -16,9 +16,9 @@ int main()
 {
 
     const int SCORE_NUM = 10;
-    int scores[SCORE_NUM];
+    int *scores = new int[SCORE_NUM];
 
-    for (int i = 0; i < SCORE_NUM; i++)
+    for (int i = 0; i < SCORE_NUM; i += 2)
     {
         scores[i] = i;
     }
