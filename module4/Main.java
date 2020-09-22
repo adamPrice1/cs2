@@ -9,8 +9,8 @@ class ScotchTape {
         length = objLength;
     }
 
-    static void printTapeArray(ScotchTape[] tapeArray, int length) {
-        for (int i = 0; i < length; i++) {
+    static void printTapeArray(ScotchTape[] tapeArray) {
+        for (int i = 0; i < tapeArray.length; i++) {
             System.out.println(tapeArray[i].colour + " (" + Integer.toString(tapeArray[i].length) + " cm, "
                     + Integer.toString(tapeArray[i].weight) + " oz)");
         }
